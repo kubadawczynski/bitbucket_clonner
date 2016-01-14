@@ -6,7 +6,7 @@ SERVER_TO=$3
 PROJECT=$4
 
 createRepo(){
-curl -u admin_user:admin_pass -H "Content-Type: application/json"  -X POST  http://$SERVER_TO:7990/rest/api/1.0/projects/OB/repos -d '{ "name":"'$1'","scmId":"git","forkable":true }'
+curl -u admin_user:admin_pass -H "Content-Type: application/json"  -X POST  http://$SERVER_TO:7990/rest/api/1.0/projects/$PROJECT/repos -d '{ "name":"'$1'","scmId":"git","forkable":true }'
 }
 
 cloneRepo(){
