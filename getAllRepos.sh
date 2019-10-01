@@ -3,8 +3,6 @@
 LOGIN_CLOUD=$1
 SERVER_TO=$2
 PROJECT=$3
-
-
 createRepo(){
 curl -u admin_user:admin_pass -H "Content-Type: application/json"  -X POST  http://$SERVER_TO:7990/rest/api/1.0/projects/$PROJECT/repos -d '{ "name":"'$1'","scmId":"git","forkable":true }'
 }
